@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.custom.i18n.resources" value="mesTextes"/>
+
+    <package name="/" extends="struts-default">
+
+        <default-action-ref name="accueil"/>
+        <action name="accueil">
+            <result>/WEB-INF/pages/Connexion.jsp</result>
+        </action>
+
+        <action name="connexion" class="actions.Connexion">
+            <result name="success">/WEB-INF/pages/menu.jsp</result>
+            <result name="input">/WEB-INF/pages/Connexion.jsp</result>
+        </action>
+
+        <action name="goMatchsOuvert" class="actions.GoMatchsOuvert">
+            <result name="success">/WEB-INF/pages/ListeMatchsOuverts.jsp</result>
+            <result name="input">/WEB-INF/pages/menu.jsp</result>
+        </action>
+
+        <action name="goMesParis" class="actions.GoMesParis">
+            <result name="success">/WEB-INF/pages/ListeMesParis.jsp</result>
+            <result name="input">/WEB-INF/pages/menu.jsp</result>
+        </action>
+
+        <action name="parie" class="actions.Parie" >
+             <result name="success">/WEB-INF/pages/parie.jsp</result>
+        </action>
+
+        <action name="annulerPari" class="actions.AnnulerPari" >
+            <result name="success">/WEB-INF/pages/annulerParie.jsp</result>
+        </action>
+
+        <action name="validerPari" class="actions.ValiderPari" >
+            <result name="success">/WEB-INF/pages/resultat.jsp</result>
+        </action>
+
+        <action name="goLogout" class="actions.GoLogout">
+            <result name="success">/WEB-INF/pages/Connexion.jsp</result>
+            <result name="input">/WEB-INF/pages/menu.jsp</result>
+        </action>
+
+        <action name="menu">
+            <result>/WEB-INF/pages/menu.jsp</result>
+        </action>
+
+    </package>
+
+</struts>

@@ -1,0 +1,7 @@
+actions\Environnement.class
+actions\GoMatchsOuvert.class
+actions\Connexion.class
+actions\GoLogout.class
+actions\Parie.class
+actions\ValiderPari.class
+actions\GoMesParis.class
